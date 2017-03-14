@@ -33,7 +33,7 @@
 
      <div class="panel panel-default" style= "width:180px; height:150px; margin-left:10px"
     >
-  <div class="panel-body">
+  <div class="randomNumber">
     (RNG goes here)
   </div>
 
@@ -52,10 +52,10 @@
 </div>
 <div>
 <ul class="list-inline">
-  <li><input type="image" src="diamond.png" name="saveForm" class="diamond" id="saveForm"></li>
-    <li><input type="image" src="gems.jpg" name="saveForm" class="diamond" id="saveForm"></li>
-    <li><input type="image" src="emerald.jpg" name="saveForm" class="diamond" id="saveForm"></li>
-    <li><input type="image" src="ruby.jpg" name="saveForm" class="diamond" id="saveForm"></li>
+  <li><input type="image" src="diamond.png" name="saveForm" class="diamond" id="crystals"></li>
+    <li><input type="image" src="gems.jpg" name="saveForm" class="diamond" id="crystals"></li>
+    <li><input type="image" src="emerald.jpg" name="saveForm" class="diamond" id="crystals"></li>
+    <li><input type="image" src="ruby.jpg" name="saveForm" class="diamond" id="crystals"></li>
 </ul>
 
 </div>
@@ -65,10 +65,14 @@
     Your total Score is:
     </div>
     </div>
-     <div class="panel panel-default" style="width:200px;height:200px">
-  <div class="score-total">
+     <div class="score" style="width:200px;height:200px; background:red;">
+  <div class="score">
     (Total Score Goes here)
     
   </body>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="logic.js"></script>
+
 
 </html>

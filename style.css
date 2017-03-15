@@ -19,13 +19,14 @@ h1 {
 	background: blue;
 	color: red;
 	max-width:250px;
+	margin-top: -10px;
 }
 
 p {color:red;
 
 }
 
-.diamond {width: 50px;
+.blue {width: 50px;
 			height: 50px;}
 
 .counter {
@@ -35,20 +36,33 @@ p {color:red;
 
 
 
-.gems {    height: 50px;
+.purple {    height: 50px;
     float: right;
 
     margin-right: 250px;
     z-index: 80;}
 
-    .emerald {
+    .red {
+    	    height: 50px;
+    margin-left: -250px;
+    }
+
+    .green {
     	    position: absolute;
     height: 50px;
     width: 50px;
-    margin-top: 113px;
-    margin-left: 150px;
+    margin-top: -48px;
+    margin-left: -175px;
     }
 
     .number {
     	width:180px;
+    }
+
+    .randomNumber {
+    	font-size: 40px;
+    }
+
+    .score {
+    	font-size: 40px;
     }

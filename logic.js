@@ -2,8 +2,8 @@
 
 
 //game counters
-var wins= 0;
-var losses= 0;
+var winCount = 0;
+var lossCount = 0;
 totalScore=0;
 gameOver= false;
 
@@ -21,15 +21,19 @@ $ (document).ready(function(){
 	var crystals4= (Math.ceil(Math.random() * 11))+1;
 	console.log(random);
 
+
+
 function restart(){
 
 
-
+	$(".randomNumber").html(random);
 random = Math.floor(Math.random()*76+24);
  crystals1= (Math.floor(Math.random() * 11))+1;
  crystals2= (Math.floor(Math.random() * 11))+1;
  crystals3= (Math.floor(Math.random() * 11))+1;
  crystals4= (Math.floor(Math.random() * 11))+1;
+ console.log(random);
+
 totalScore=0;
 gameOver=false;}
 
@@ -76,20 +80,16 @@ $(".green").on("click", function() {
 
 		if (totalScore === random) {
 			gameOver=true;
-			wins++;
-				$(".randomNumber").html(random);
-				random = Math.floor(Math.random()*76+24);
-			restart();
+					restart();
+			$(".randomNumber").html(random);
+	
 		
-
 		} 
+
  if (totalScore > random) {
-			losses++;
- 	       restart();
- 	       	$(".randomNumber").html(random);
- 	       	random = Math.floor(Math.random()*76+24);
-			console.log(random);
-		
+ 				gameOver=true;
+			 restart();		
+		$(".randomNumber").html(random);
 
 
 		}

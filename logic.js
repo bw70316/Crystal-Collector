@@ -2,8 +2,8 @@
 
 
 //game counters
-var winCount = 0;
-var lossCount = 0;
+var winCounter = 0;
+var lossCounter = 0;
 totalScore=0;
 gameOver= false;
 
@@ -21,6 +21,7 @@ $ (document).ready(function(){
 	var crystals4= (Math.ceil(Math.random() * 11))+1;
 	console.log(random);
 
+// This is my on ready function. I saw this on several pieces of code and youtube videos. I want to say it works as a kind of base for the program. So if like no actions were taken, this is how the program starts. It should pick a number between 1 and 12 randomly for my crystals and generate a random number between 24-100 as the number the user wants the crystals to add up to. I chose 24 because a user could get 12 and still win the game in two clicks. I didn't want it to be possible for the user to get a number that could be clicked on twice (ex: if I made the crystals able to equal 13) that could exceed the lowest possible random number of 24. 
 
 
 function restart(){
@@ -32,11 +33,12 @@ random = Math.floor(Math.random()*76+24);
  crystals2= (Math.floor(Math.random() * 11))+1;
  crystals3= (Math.floor(Math.random() * 11))+1;
  crystals4= (Math.floor(Math.random() * 11))+1;
- console.log(random);
+
+
 
 totalScore=0;
 gameOver=false;}
-
+// This is my restart function. It goes into effect when my if statements are deemed true. It generates new random numbers for the crystal as well as for the main RN when my If statements are realized. I am not entirely sure if the gameOver=false thing is necessary, I am going to have that cleared up in office hours, but I didn't want to mess up a good thing and my trail and error capacity has been maxed out with this program. 
 
 
 $(".blue").on("click", function() {
@@ -73,27 +75,42 @@ $(".green").on("click", function() {
 	console.log(crystals4); });
 
 
-
+// the colors refer to my div classes for their respective crystals. The on click function goes into action(what's the more jargon term for this, executes?) when a crystal button is clicked. It also performs that jquery function within the "on click". The checkScore is a function defined below with my if statements. 
 
 
 	function checkScore(){
 
 		if (totalScore === random) {
-			gameOver=true;
+			
 					restart();
-			$(".randomNumber").html(random);
-	
+			
+	winCounter++;
+			document.getElementById("winCounter").innerHTML = winCounter
 		
 		} 
 
+//This is my checkscore function for my wins. When the RN equals the totalScore of the crystals, the wincounter goes up one. I followed the Hangman example to get the document.GEBI, however i know there is a jquery function for this that I will famliarize myself with. Everytime the a crystal button is pressed, the checkScore function is enacted. If the If statement is realized, then the restart function mentioned above executes. 
+
+
  if (totalScore > random) {
- 				gameOver=true;
+ 				
 			 restart();		
-		$(".randomNumber").html(random);
+		
+		lossCounter++;
+		document.getElementById("lossCounter").innerHTML = lossCounter
 
 
 		}
+//This is my checkscore function for losses. Same thing as before, only the loss counter goes up.
+
+//IMPT: I realize that when a Win or Loss is triggered, there is a little message in the game that says you lost or won in the scoreboard section. It took me a long time to get the wins and losses to record, I played with an alert system, which i know usually makes an alert box, but I wasn't sure how to do that and time is running out.  
+
 	}
+
+			
+		
+		
+	
 });
 
 

@@ -4,6 +4,8 @@
 
   <head>
 
+  <!--I realize I need to do a better job of organizing the content of my folder into separate folders, but I have had issues with double names and generally being disorganized on that front. So, based on the fact this took me a lot of time, I'm not going to mess with a good thing until it has been turned in completely. Then, I am going to go back and try to recode this from scratch, putting the style and images and java files into their respective assets and javascript and images folder-->
+
     <meta charset="UTF-8">
     <title>Crystal Collector</title>
       <meta charset="UTF-8">
@@ -34,6 +36,8 @@
      <div class="panel panel-default" style= "width:180px; height:150px; margin-left:10px"
     >
   <div class="randomNumber">
+
+  <!-- Some of the styling I did entirely in the the google Debugger or inspect or whatever the correct term is. Sometimes I was confident enough to change the classes in the css, as I did for the crystal images, but other times I went with if it ain't broke, don't fix it mantra. So I feel I demonstrated I know how to do it, it was just easier sometimes to C&P from the inspect after messing around with the CSS in there-->
    
   </div>
 
@@ -59,21 +63,25 @@
     <li><input type="image" src="ruby.jpg" name="saveForm" class="red" id="crystals"></li>
 </ul>
 
+<!--This is a list for my images. I tried to do it the first time without the inline list and it made things more difficult for no reason-->
+
 </div>
 <div class="panel panel-default" style= "clear: both;
-    max-width: 200px;">
+    max-width: 200px; margin-left:10px">
   <div class="panel-body">
     Your total Score is:
     </div>
     </div>
-     <div class="score" style="width:200px;height:200px; background:red; margin-bottom:10px">
+     <div class="score" style="width:200px;height:200px; background:red; margin-bottom:10px; margin-left:10px">
   <div class="score">
     
+    <!--here is where the score is added up as the user clicks the randominzed crystal buttons-->
     
   </body>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script type="text/javascript" src="logic.js"></script>
 
+<!--Ryo informed me that it is best to put your javascript here because it's the last thing you want to load, I can't entirely remember the reason offhand though.-->
 
 </html>
